@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,6 +15,9 @@ import java.util.Date;
  */
 public class teste {
     public static void main(String[] args){
+        
+        int sorteio;
+        sorteio = (int) ( Math.random() * 100 ) + 1;
         
         Atacante atacante1 = new Atacante(0,0,"mateus",100,7,100,100);
         Atacante atacante2 = new Atacante(0,0,"ellen",100,7,100,100);
@@ -31,7 +35,7 @@ public class teste {
         time1.adicionarDefensor(defensor2);
         time1.adicionarGoleiro(goleiro1);
         
-        System.out.println("Habilidade defensor 1: "+defensor1.getHabilidade());
+        //System.out.println("Habilidade defensor 1: "+defensor1.getHabilidade());
         
         Time time2 = new Time("time 2");
         
@@ -42,6 +46,11 @@ public class teste {
         time2.adicionarGoleiro(goleiro1);
         
         Date data = new Date();
-        Partida partida1 = new Partida(data, time1, time2, 0, 0);
+        Partida partida1 = new Partida(data, time1, time2);
+       for(int i=0;i<10;i++){
+            System.out.println(new Partida(data, time1, time2).Simulacao());
+       }
+       
+        
     }
 }

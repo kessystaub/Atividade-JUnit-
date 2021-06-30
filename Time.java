@@ -25,7 +25,7 @@ public class Time {
     private int vitorias;
     private int empates;
     private int derrotas;
-    private boolean visita;
+    public boolean visita;
     
     public Time(String nome){
         this.nome=nome;
@@ -76,5 +76,55 @@ public class Time {
     public boolean visitante(){
         return this.visita;
     }
+    public void setVitoria(){
+        this.vitorias++;
+    }
+    public void setDerrota(){
+        this.derrotas++;
+    }
+    public void setEmpate(){
+        this.empates++;
+    }
     
+    
+    
+    public int calculaForca(){
+       int forca=0;
+       for(Atacante atacante: this.atacantes){
+           forca += atacante.getHabilidade();
+       }
+       for(Defensor defensor: this.defensores){
+           forca+= defensor.getHabilidade();
+       }
+       forca+=this.goleiro.getHabilidade();
+       
+
+       
+       return forca;
+   }
+   
+   public void golDe(int tipo, int local){
+       if(tipo==1){
+           if(local==0){
+               this.atacantes.get(0).gols++;
+           }else{
+               this.atacantes.get(1).gols++;
+           }           
+           
+           
+       }else if(tipo ==2){
+           
+           if(local==0){
+              this.defensores.get(0).gols++;
+           }else{
+               this.defensores.get(1).gols++;
+           }
+           
+           
+       }else{
+           this.goleiro.gols++;
+       
+       }
+   }
+   
 }
