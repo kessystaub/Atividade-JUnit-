@@ -36,7 +36,7 @@ public class Time {
     
     public void adicionarDefensor(Defensor defensor){
         if(this.defensores.size()>2){
-            
+            System.out.println("Ja existem mais de dois defensores");
         }else{
             this.defensores.add(defensor);
         }
@@ -44,7 +44,7 @@ public class Time {
     
     public void adicionarAtacante(Atacante atacante){
         if(this.atacantes.size()>2){
-            
+            System.out.println("Ja existem mais de dois atacantes");
         }else{
             this.atacantes.add(atacante);
         }
@@ -52,7 +52,7 @@ public class Time {
     
     public void adicionarGoleiro(Goleiro goleiro){
         if(this.goleiro!=null){
-            
+            System.out.println("Ja existe um goleiro na equipe");
         }else{
             this.goleiro=goleiro;
         }
