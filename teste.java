@@ -1,4 +1,5 @@
 
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -49,8 +50,10 @@ public class teste {
         Partida partida1 = new Partida(data, time1, time2);
        for(int i=0;i<10;i++){
             System.out.println(new Partida(data, time1, time2).Simulacao());
-       }
+       } 
        
-        
+       
+       
+       
     }
 }
