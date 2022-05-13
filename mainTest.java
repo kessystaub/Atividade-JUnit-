@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author Pichau
  */
-public class testeTest {
+public class mainTest {
     
     public testeTest() {
     }
@@ -40,10 +40,10 @@ public class testeTest {
      * Test of main method, of class teste.
      */
     @Test
-    public void testMain() {
+    public void mainMain() {
         System.out.println("main");
         String[] args = null;
-        teste.main(args);
+        main.main(args);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
